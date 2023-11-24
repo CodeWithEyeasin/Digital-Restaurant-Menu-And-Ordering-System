@@ -7,7 +7,7 @@ class BillingForOdredItem extends RestaurantMenuList
     var now=DateTime.now();
     print("\n\n          ABC Restaurant\n         Signature Branch\nTongi College Gate,Gazipur Dhaka,BD\n"
         "-----------------------------------\n"
-        "   $now \n"
+        "         Table Number :$TableNumberSelect\n  $now \n"
         "Oty Item Name            Price\n"
         "-----------------------------------");
     if(Espresso>0)
