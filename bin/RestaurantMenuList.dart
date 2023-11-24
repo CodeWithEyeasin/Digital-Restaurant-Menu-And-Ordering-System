@@ -97,7 +97,7 @@ class RestaurantMenuList
     }
     if(Espresso>0||Americano>0||Cappuccino>0||Hot_Chocolate>0)
       {
-        print("\nSir/Mam Your Order is Done Please wait 5 second");
+        print("\nSir/Mam Your Order is Done Please wait 5 second for bill");
         sleep(Duration(seconds: 5));
       }
     if(Espresso==0 && Americano==0 && Cappuccino==0 && Hot_Chocolate==0 )
