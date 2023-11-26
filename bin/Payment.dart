@@ -9,20 +9,20 @@ class Payment extends BillingForOdredItem
   //this is for bKash Payment
   void setbKashpassword(int password)
   {
-    this._bKashpassword=password;
+    _bKashpassword=password;
   }
   void setbKashnumber(int phone)
   {
-    this._bKashNumber=phone;
+    _bKashNumber=phone;
   }
 //this is for Nagad Payment
  void setNagadPassword(int password)
  {
-   this._NagadPassword=password;
+   _NagadPassword=password;
  }
  void setNagadNumber(int phone)
  {
-   this._NagadNumber=phone;
+   _NagadNumber=phone;
  }
 
   void payment()
@@ -59,46 +59,57 @@ class Payment extends BillingForOdredItem
          if(passkey==_bKashpassword)
          {
            print("-----------------------------------");
-           print("Payment Successfully From bKash");
+           print("★ Payment Successfully From bKash ★");
            PaymentOptionNotSelect=true;
            LoopBreak=true;
          }
          else
          {
-           print("Wrong Password Please Enter The Right bKash Password");
+           print("-----------------------------------");
+           print("     Wrong Password Please\n  Enter The Right bKash Password");
+           print("-----------------------------------\n");
          }
        }
        else
        {
-         print("Wrong bKash Number Please Enter The Write bKash Number");
+         print("-----------------------------------");
+         print("     Wrong bKash Number Please\n   Enter The Write bKash Number");
+         print("-----------------------------------\n");
        }
      }
   }
 
   void Nagad()
   {
-    print("Enter Your Nagad Number :");
-    PhoneNumber=int.parse(stdin.readLineSync()!);
-    print("Enter Your Nagad Password :");
-    passkey=int.parse(stdin.readLineSync()!);
-    if(PhoneNumber==_NagadNumber)
-    {
-      if(passkey==_NagadPassword)
+    while(!LoopBreak)
       {
-        print("-----------------------------------");
-        print("Payment Successfully From Nagad");
-        PaymentOptionNotSelect=true;
-        LoopBreak=true;
+        print("Enter Your Nagad Number :");
+        PhoneNumber=int.parse(stdin.readLineSync()!);
+        print("Enter Your Nagad Password :");
+        passkey=int.parse(stdin.readLineSync()!);
+        if(PhoneNumber==_NagadNumber)
+        {
+          if(passkey==_NagadPassword)
+          {
+            print("-----------------------------------");
+            print("★ Payment Successfully From Nagad ★");
+            PaymentOptionNotSelect=true;
+            LoopBreak=true;
+          }
+          else
+          {
+            print("-----------------------------------");
+            print("     Wrong Password Please\n Enter The Right Nagad Password");
+            print("-----------------------------------\n");
+          }
+        }
+        else
+        {
+          print("-----------------------------------");
+          print("    Wrong bKash Number Please\n  Enter The Write Nagad Number");
+          print("-----------------------------------\n");
+        }
       }
-      else
-      {
-        print("Wrong Password Please Enter The Right Nagad Password");
-      }
-    }
-    else
-    {
-      print("Wrong bKash Number Please Enter The Write Nagad Number");
-    }
   }
 
 }
