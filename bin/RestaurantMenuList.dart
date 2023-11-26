@@ -5,7 +5,8 @@ class RestaurantMenuList
   late double EspressoPrice=110,AmericanoPrice=150,CappuccinoPrice=190,HotChocolatePrice=190,TotalPrice,Tax;
   double EspressoOrderPrice=0,AmericanoOrderPrice=0,CappuccinoOrderPrice=0,HotChocolateOrderPrice=0;
   late int Espresso=0,Americano=0,Cappuccino=0,Hot_Chocolate=0,choose,TableNumberSelect;
-  bool orderingFinished = false,TableNumberNotselect=false;
+  bool orderingFinished = false,TableNumberNotselect=false,PaymentOptionNotSelect=false,LoopBreak=false;
+
   void restaurant_menu ()
   {
     while(!orderingFinished)

@@ -34,7 +34,7 @@ class BillingForOdredItem extends RestaurantMenuList
     print("Include 5% tax            $Tax taka");
     print("-----------------------------------");
     print("Net Total                 $TotalPrice taka");
-    print("        Thanks For Coming");
+    print("        Thanks For Coming\n");
 
   }
 }
